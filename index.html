@@ -5,51 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Yo</title>
+    <title>User Dashborad</title>
 </head>
 <body>
-    <header style="width: auto; height: 200px; background-color: cadetblue; text-align: center;">
+    <header style="width: auto; height: 200px; background-color: skyblue; text-align: center;">
         <h1>Adobe Admin Portal</h1>
     </header>
     <main style="height: 100px; text-align: center;">
         <section id = "autheControlSection" style = "margin-top: 25px;">
-            <div id = "blogin">
-                <button type = "button" onclick="loadLogin()">Login</button>
+            <div id = "ulogin">
+                <button type = "button" onclick="login()">Login</button>
             </div>
             <br>
-            <div id = "bsignup">
-                <button type = "button" onclick = "loadSignUp()">Sign Up</button type>
+            <div id = "usignup">
+                <button type = "button" onclick = "signUp()">Sign Up</button type>
             </div>
         </section>
         <section id = "authDisplayArea">
             <script>
-                function loadLogin() {
-                  var xhttp = new XMLHttpRequest();
-                  xhttp.onreadystatechange = function() {
+                function login() {
+                  var httpReq = new XMLHttpRequest();
+                  httpReq.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
-                      document.getElementById("blogin").innerHTML =
+                      document.getElementById("ulogin").innerHTML =
                       this.responseText;
                     }
                   };
-                  xhttp.open("GET", "login.html", true);
-                  xhttp.send();
+                  httpReq.open("GET", "login.html", true);
+                  httpReq.send();
                 }
-                function loadSignUp() {
-                  var xhttp = new XMLHttpRequest();
-                  xhttp.onreadystatechange = function() {
+                function signUp() {
+                  var httpReq = new XMLHttpRequest();
+                  httpReq.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
-                      document.getElementById("bsignup").innerHTML =
+                      document.getElementById("usignup").innerHTML =
                       this.responseText;
                     }
                   };
-                  xhttp.open("GET", "signup.html", true);
-                  xhttp.send();
+                  httpReq.open("GET", "signUp.html", true);
+                  httpReq.send();
                 }
                 </script>
         </section>
 
-    </main>
-    <footer style = "width: auto; height: 200px; background-color: aquamarine; text-align: center;"></footer>
-    <h1>@Adobe Copyroght 2020</h1>
+    </main> 
 </body>
+<footer style = "width: auto; height: 200px; background-color: skyblue; text-align: center;">
+    <h1>@Adobe Copyroght 2020</h1>
+</footer>
 </html>
