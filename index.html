@@ -24,26 +24,26 @@
         <section id = "authDisplayArea">
             <script>
                 function login() {
-                  var httpReq = new XMLHttpRequest();
-                  httpReq.onreadystatechange = function() {
+                  var req = new XMLHttpRequest();
+                  req.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                       document.getElementById("ulogin").innerHTML =
-                      this.responseText;
+                      req.responseText;
                     }
                   };
-                  httpReq.open("GET", "login.html", true);
-                  httpReq.send();
+                  req.open("GET", "login.html", true);
+                  req.send();
                 }
                 function signUp() {
-                  var httpReq = new XMLHttpRequest();
-                  httpReq.onreadystatechange = function() {
+                  var req = new XMLHttpRequest();
+                  req.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                       document.getElementById("usignup").innerHTML =
-                      this.responseText;
+                      req.responseText;
                     }
                   };
-                  httpReq.open("GET", "signUp.html", true);
-                  httpReq.send();
+                  req.open("GET", "signUp.html", true);
+                  req.send();
                 }
                 </script>
         </section>
